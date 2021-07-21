@@ -1,4 +1,4 @@
-package dev.yue.api.module;
+package dev.yue.api.feature.module;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,10 +12,13 @@ public class Module extends Feature {
 
     protected ArrayList<Setting<?>> settings;
 
+    protected Class<? extends Category> category;
+
     protected int key;
 
-    public Module (String name, String description, Setting<?>... settings) {
+    public Module (String name, Class<? extends Category> category, String description, Setting<?>... settings) {
         super(name, description);
+        this.category = category;
         this.settings = new ArrayList<Setting<?>>(Arrays.asList(settings));
         this.toggled = false;
         this.hidden = false;

@@ -1,19 +1,11 @@
 package dev.yue.api.render;
 
-public class Element {
-
-    public Panel panel;
+public class Element extends Component {
 
     public Object value;
 
-    public int x, y;
-
-    public int width, height;
-
-    public boolean clickable, draggable, listenable;
-
-    public Element  (Panel panel, Object value) {
-        this.panel = panel;
+    public Element  (Component parent, Object value) {
+        this.parent = parent;
         this.value = value;
     }
     
@@ -29,7 +21,7 @@ public class Element {
         return false;
     }
 
-    public boolean drag (int mouseX, int mouseY, int deltaX, int deltaY, int button) {
-        return false;
+    public Element drag (int mouseX, int mouseY, int deltaX, int deltaY, int button) {
+        return null;
     }
 }

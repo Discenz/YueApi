@@ -1,4 +1,4 @@
-package dev.yue.api.command;
+package dev.yue.api.feature.command;
 
 import dev.yue.api.feature.Feature;
 
